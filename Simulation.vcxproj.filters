@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{fc6b8cf1-c236-4213-9989-5a5eb7d9e4ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{26098fd4-abd1-4bb6-9e8a-d7567a6afcb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Shaderclasses">
+      <UniqueIdentifier>{8f561bcf-a78f-4f1e-b70d-a7a0603bccc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Util">
+      <UniqueIdentifier>{a0225378-65d1-42da-b41f-9d718976408d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{c7508eae-6a33-404f-a9bf-e4db9e46fec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d27f364b-fd8d-4ad0-90c7-5595301744f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{bb9b3d64-7acf-4a70-a682-cb819accfa0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Shaderclasses">
+      <UniqueIdentifier>{c8f238b0-6758-4d9f-a93c-5487e210de45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Util">
+      <UniqueIdentifier>{1a421a29-ab0f-4995-91ec-869ad5b30916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SplitApproach">
+      <UniqueIdentifier>{67611739-af41-49a1-9945-fc8a02c537de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SplitApproach">
+      <UniqueIdentifier>{6d61a6e1-cc36-479c-accb-334380e1c494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EmulationApproach">
+      <UniqueIdentifier>{2c0e9a22-4f1c-4a5a-9425-41043fa1e6bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EmulationApproach">
+      <UniqueIdentifier>{b21a792f-aedb-45f4-ad84-9556ac2bed06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Split">
+      <UniqueIdentifier>{589c18df-71dd-43e4-bb62-41911bb8c193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\Emulation">
+      <UniqueIdentifier>{945dcfa3-b9fe-4393-ae01-c9d9b1ffe669}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shader\cThirdTractrixSimulation.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\cTractrixSimulation.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\thirdTractrixSplineProperties.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\tractrixSplineProperties.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\vgpTractrixSplinesControlPolygon.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\vgpTractrixSplinesSplines.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\vpHairBase.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\vgpEmulationControlPolygon.hlsl">
+      <Filter>Shaders\Emulation</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\vgpEmulationSplines.hlsl">
+      <Filter>Shaders\Emulation</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ThirdSimulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ComputeShader.cpp">
+      <Filter>Source Files\Engine\Shaderclasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeometryShader.cpp">
+      <Filter>Source Files\Engine\Shaderclasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PixelShader.cpp">
+      <Filter>Source Files\Engine\Shaderclasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexShader.cpp">
+      <Filter>Source Files\Engine\Shaderclasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shader.cpp">
+      <Filter>Source Files\Engine\Shaderclasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Source Files\Engine\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResetUtils.cpp">
+      <Filter>Source Files\Engine\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3dApp.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3dUtil.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DDSTextureLoader.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameTimer.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeometryGenerator.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HairBase.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HairLoader.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LightHelper.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MathHelper.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Entry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SplitSimulatedHair.cpp">
+      <Filter>Source Files\SplitApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SplitSimulation.cpp">
+      <Filter>Source Files\SplitApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EmulationSimulatedHair.cpp">
+      <Filter>Source Files\EmulationApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EmulationSimulation.cpp">
+      <Filter>Source Files\EmulationApproach</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ThirdSimulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ComputeShader.h">
+      <Filter>Header Files\Engine\Shaderclasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GeometryShader.h">
+      <Filter>Header Files\Engine\Shaderclasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PixelShader.h">
+      <Filter>Header Files\Engine\Shaderclasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shader.h">
+      <Filter>Header Files\Engine\Shaderclasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VertexShader.h">
+      <Filter>Header Files\Engine\Shaderclasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Texture.h">
+      <Filter>Header Files\Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ResetUtils.h">
+      <Filter>Header Files\Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RenderItem.h">
+      <Filter>Header Files\Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IDrawable.h">
+      <Filter>Header Files\Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Camera.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\d3dApp.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\d3dUtil.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\d3dx11effect.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DDSTextureLoader.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameTimer.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GeometryGenerator.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HairBase.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HairLoader.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LightHelper.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MathHelper.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MeshGenerator.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SplitSimulatedHair.h">
+      <Filter>Header Files\SplitApproach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SplitSimulation.h">
+      <Filter>Header Files\SplitApproach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EmulationSimulatedHair.h">
+      <Filter>Header Files\EmulationApproach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EmulationSimulation.h">
+      <Filter>Header Files\EmulationApproach</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\cSplitSimulation.hlsl">
+      <Filter>Shaders\Split</Filter>
+    </None>
+    <None Include="Shader\splitProperties.hlsl">
+      <Filter>Shaders\Split</Filter>
+    </None>
+    <None Include="Shader\vgpSplitControlPolygon.hlsl">
+      <Filter>Shaders\Split</Filter>
+    </None>
+    <None Include="Shader\vgpSplitSplines.hlsl">
+      <Filter>Shaders\Split</Filter>
+    </None>
+    <None Include="Shader\cEmulationSimulation.hlsl">
+      <Filter>Shaders\Emulation</Filter>
+    </None>
+    <None Include="Shader\emulationProperties.hlsl">
+      <Filter>Shaders\Emulation</Filter>
+    </None>
+  </ItemGroup>
+</Project>

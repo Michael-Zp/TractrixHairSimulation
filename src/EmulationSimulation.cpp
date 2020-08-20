@@ -11,12 +11,52 @@ EmulationSimulation::EmulationSimulation(ID3D11Device *device, ID3D11DeviceConte
 {
 	std::unique_ptr<HairLoader> hairLoader = nullptr;
 
-	if (config == EmulationSimulation::Configuration::LoadHair)
+	if (config == EmulationSimulation::Configuration::Mohawk || config == EmulationSimulation::Configuration::Short)
 	{
-		hairLoader = std::unique_ptr<HairLoader>(new HairLoader(fopen("./HairData/Ratboy/Ratboy_mohawk.tfx", "r")));
+		std::string path = "";
+		switch (config)
+		{
+		case EmulationSimulation::Configuration::Mohawk:
+			path = "./HairData/Ratboy/Ratboy_mohawk.tfx";
+			break;
+		case EmulationSimulation::Configuration::Short:
+			path = "./HairData/Ratboy/Ratboy_short.tfx";
+			break;
+		default:
+			DebugBreak();
+			break;
+		}
+		hairLoader = std::unique_ptr<HairLoader>(new HairLoader(fopen(path.c_str(), "r")));
 
 		mStrandsCount = hairLoader->m_numTotalStrands;
 		mNumberOfSegments = hairLoader->m_numVerticesPerStrand - 1;
+	}
+
+	switch (config)
+	{
+	case EmulationSimulation::Configuration::Random1k16:
+		mStrandsCount = 1000;
+		mNumberOfSegments = 15;
+		config = EmulationSimulation::Configuration::Random;
+		break;
+
+	case EmulationSimulation::Configuration::Random10k16:
+		mStrandsCount = 10000;
+		mNumberOfSegments = 15;
+		config = EmulationSimulation::Configuration::Random;
+		break;
+
+	case EmulationSimulation::Configuration::Random1k32:
+		mStrandsCount = 1000;
+		mNumberOfSegments = 31;
+		config = EmulationSimulation::Configuration::Random;
+		break;
+
+	case EmulationSimulation::Configuration::Random10k32:
+		mStrandsCount = 10000;
+		mNumberOfSegments = 31;
+		config = EmulationSimulation::Configuration::Random;
+		break;
 	}
 
 	std::vector<std::vector<XMFLOAT3>> strandPoints;
@@ -31,7 +71,7 @@ EmulationSimulation::EmulationSimulation(ID3D11Device *device, ID3D11DeviceConte
 	for (int i = 0; i < strandPoints.size(); i++)
 	//for (int i = 0; i < 200; i++)
 	{
-		if (config == EmulationSimulation::Configuration::LoadHair)
+		if (config == EmulationSimulation::Configuration::Mohawk || config == EmulationSimulation::Configuration::Short)
 		{
 			strandPoints[i].resize(hairLoader->m_numVerticesPerStrand);
 			for (int k = 0; k < hairLoader->m_numVerticesPerStrand; k++)

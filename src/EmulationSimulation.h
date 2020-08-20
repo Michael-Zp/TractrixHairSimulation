@@ -67,8 +67,13 @@ public:
 		Z4Points,
 		Z12Points,
 		Z31Points,
-		LoadHair,
-		Random
+		Mohawk,
+		Short,
+		Random,
+		Random1k16,
+		Random1k32,
+		Random10k16,
+		Random10k32
 	};
 
 	EmulationSimulation(ID3D11Device *device, ID3D11DeviceContext *context, PropertiesConstBuf props, XMFLOAT4 strandColor, Configuration config);

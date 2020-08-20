@@ -82,7 +82,7 @@ void SplitSimulatedHair::Draw(float deltaTime, ID3D11DeviceContext *context)
 	}
 
 	mSimulation->Simulate(deltaTime, context);
-	DrawSplines(deltaTime, context);
+	//DrawSplines(deltaTime, context);
 	//DrawControlPolygon(deltaTime, context);
 
 	mIsUpdated = false;

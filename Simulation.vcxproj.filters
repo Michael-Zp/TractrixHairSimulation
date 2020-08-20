@@ -75,6 +75,12 @@
     <FxCompile Include="Shader\vgpEmulationSplines.hlsl">
       <Filter>Shaders\Emulation</Filter>
     </FxCompile>
+    <FxCompile Include="Shader\smallEmulationProperties.hlsl">
+      <Filter>Shaders\Emulation</Filter>
+    </FxCompile>
+    <FxCompile Include="Shader\cSmallEmulationSimulation.hlsl">
+      <Filter>Shaders\Emulation</Filter>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ThirdSimulation.cpp">
@@ -147,6 +153,18 @@
       <Filter>Source Files\EmulationApproach</Filter>
     </ClCompile>
     <ClCompile Include="src\EmulationSimulation.cpp">
+      <Filter>Source Files\EmulationApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SmallSplitSimulatedHair.cpp">
+      <Filter>Source Files\SplitApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SmallSplitSimulation.cpp">
+      <Filter>Source Files\SplitApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SmallEmulationSimulatedHair.cpp">
+      <Filter>Source Files\EmulationApproach</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SmallEmulationSimulation.cpp">
       <Filter>Source Files\EmulationApproach</Filter>
     </ClCompile>
   </ItemGroup>
@@ -232,6 +250,18 @@
     <ClInclude Include="src\EmulationSimulation.h">
       <Filter>Header Files\EmulationApproach</Filter>
     </ClInclude>
+    <ClInclude Include="src\SmallSplitSimulation.h">
+      <Filter>Header Files\SplitApproach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SmallSplitSimulatedHair.h">
+      <Filter>Header Files\SplitApproach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SmallEmulationSimulatedHair.h">
+      <Filter>Header Files\EmulationApproach</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SmallEmulationSimulation.h">
+      <Filter>Header Files\EmulationApproach</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader\cSplitSimulation.hlsl">
@@ -251,6 +281,12 @@
     </None>
     <None Include="Shader\emulationProperties.hlsl">
       <Filter>Shaders\Emulation</Filter>
+    </None>
+    <None Include="Shader\cSmallSplitSimulation.hlsl">
+      <Filter>Shaders\Split</Filter>
+    </None>
+    <None Include="Shader\smallSplitProperties.hlsl">
+      <Filter>Shaders\Split</Filter>
     </None>
   </ItemGroup>
 </Project>

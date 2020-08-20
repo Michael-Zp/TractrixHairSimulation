@@ -7,8 +7,12 @@
 #include "HairBase.h"
 #include "EmulationSimulatedHair.h"
 #include "EmulationSimulation.h"
+#include "SmallEmulationSimulatedHair.h"
+#include "SmallEmulationSimulation.h"
 #include "SplitSimulatedHair.h"
 #include "SplitSimulation.h"
+#include "SmallSplitSimulatedHair.h"
+#include "SmallSplitSimulation.h"
 
 
 Entry::Entry(HINSTANCE hInstance) : D3DApp(hInstance)
@@ -48,11 +52,32 @@ bool Entry::Init()
 	//EmulationSimulation* emuSim = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Random);
 	//EmulationSimulation* emuSim = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Z12Points);
 	//mRenderItems.push_back(new EmulationSimulatedHair(md3dDevice, md3dImmediateContext, emuSim));
+
+	//EmulationSimulation* splitSim = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Z12Points);
+	//mRenderItems.push_back(new EmulationSimulatedHair(md3dDevice, md3dImmediateContext, splitSim));
+	//EmulationSimulation* splitSimShort = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Mohawk);
+	//mRenderItems.push_back(new EmulationSimulatedHair(md3dDevice, md3dImmediateContext, splitSimShort));
+	//SmallEmulationSimulation* splitSim = new SmallEmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SmallEmulationSimulation::Configuration::Short);
+	//mRenderItems.push_back(new SmallEmulationSimulatedHair(md3dDevice, md3dImmediateContext, splitSim));
+	//EmulationSimulation* splitSimRandom = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Random1k16);
+	//EmulationSimulation* splitSimRandom = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Random1k32);
+	//EmulationSimulation* splitSimRandom = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Random10k16);
+	//EmulationSimulation* splitSimRandom = new EmulationSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, EmulationSimulation::Configuration::Random10k32);
+	//mRenderItems.push_back(new EmulationSimulatedHair(md3dDevice, md3dImmediateContext, splitSimRandom));
+
 	
 	
 	//SplitSimulation* splitSim = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::Z12Points);
-	SplitSimulation* splitSim = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::LoadHair);
+	//mRenderItems.push_back(new SplitSimulatedHair(md3dDevice, md3dImmediateContext, splitSim));
+	SplitSimulation* splitSim = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::Mohawk);
 	mRenderItems.push_back(new SplitSimulatedHair(md3dDevice, md3dImmediateContext, splitSim));
+	SmallSplitSimulation* splitSimShort = new SmallSplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SmallSplitSimulation::Configuration::Short);
+	mRenderItems.push_back(new SmallSplitSimulatedHair(md3dDevice, md3dImmediateContext, splitSimShort));
+	//SplitSimulation* splitSimRandom = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::Random1k16);
+	//SplitSimulation* splitSimRandom = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::Random1k32);
+	//SplitSimulation* splitSimRandom = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::Random10k16);
+	//SplitSimulation* splitSimRandom = new SplitSimulation(md3dDevice, md3dImmediateContext, { true, false, false, true }, (XMFLOAT4)Colors::Red, SplitSimulation::Configuration::Random10k32);
+	//mRenderItems.push_back(new SplitSimulatedHair(md3dDevice, md3dImmediateContext, splitSimRandom));
 	
 	
 	mRenderItems.push_back(new HairBase(md3dDevice));
@@ -137,6 +162,6 @@ void Entry::DrawScene()
 	}
 
 	//Enable/Disable FrameCap
-	//HR(mSwapChain->Present(0, 0)); //Enabled
-	HR(mSwapChain->Present(1, 0)); //Disabled (1 - 4 are the steps. 1 == maxFrameRate of Monitor)
+	HR(mSwapChain->Present(0, 0)); //Enabled
+	//HR(mSwapChain->Present(1, 0)); //Disabled (1 - 4 are the steps. 1 == maxFrameRate of Monitor)
 }
